@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="myCollegeApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:myCollegeApp"
+    RequestedTheme="Light">
+
+    <!--Source code adapted from : https://www.youtube.com/watch?v=k3g-TCPtw74 -->
+    <!-- Get rid of the radio button -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="RadioButton">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <ContentPresenter Margin="15" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
