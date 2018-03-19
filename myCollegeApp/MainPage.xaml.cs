@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
+//Author: Kamila Michel
+//Source code adapted from: https://www.youtube.com/watch?v=k3g-TCPtw74
 namespace myCollegeApp
 {
     /// <summary>
@@ -38,7 +40,11 @@ namespace myCollegeApp
                     case "Map": //If tag is map load MapPage
                         MainFrame.Navigate(typeof(MapPage));
                         break;
-                }
+                }//End of switch
+
+                //After selection close the split view
+                MySplitView.IsPaneOpen = false;
+
             }//End of if statement
         }
 
