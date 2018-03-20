@@ -10,7 +10,40 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- Source code addapted from: https://www.youtube.com/watch?v=k3g-TCPtw74 -->
         <!--VisualStateManager.VisualStateGroups at run time changes the propertis of the split  view based on the size of the window -->
-        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <!-- If the window withh is between 0 and 720 and the pane is not open, change display model view to overlay-->
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="Overlay"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="False"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Compact">
+                    <VisualState.StateTriggers>
+                        <!-- When hit 720 px the pane is still close but display will be change to compact overlay -->
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="CompactOverlay"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="False"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <!--When hit 1024 px the pane is open and display changes to compact in line -->
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MySplitView.DisplayMode" Value="CompactInline"/>
+                        <Setter Target="MySplitView.IsPaneOpen" Value="True"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         
         <SplitView x:Name="MySplitView" DisplayMode="Inline" IsPaneOpen="True"> 
         <!-- Navigation items -->
