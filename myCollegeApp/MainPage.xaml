@@ -9,7 +9,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- Source code addapted from: https://www.youtube.com/watch?v=k3g-TCPtw74 -->
-        <!--VisualStateManager.VisualStateGroups at run time changes the propertis of the split  view based on the size of the window -->
+
+        <!--Adjust the size (view) to different devices-->
+        <!--VisualStateManager.VisualStateGroups at run time changes the properties of the split  view based on the size of the window -->
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="Narrow">
@@ -44,7 +46,8 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+        <!--Adjust the size (view) to different devices-->
+
         <SplitView x:Name="MySplitView" DisplayMode="Inline" IsPaneOpen="True"> 
         <!-- Navigation items -->
             <SplitView.Pane>
