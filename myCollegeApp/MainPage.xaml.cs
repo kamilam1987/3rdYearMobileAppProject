@@ -32,12 +32,11 @@ namespace myCollegeApp
 
         private void RadioButtonPaneItem_Click(object sender, RoutedEventArgs e)
         {
-            var radioButton = sender as RadioButton;
-            if (radioButton != null)
+            if (sender is RadioButton radioButton)
             {
                 switch (radioButton.Tag.ToString()) //Access using tags that are declared in MainPage.xaml
                 {
-                    case "Map": //If tag is map load MapPage
+                    case "Map": //If tag is map, load MapPage
                         MainFrame.Navigate(typeof(MapPage));
                         break;
                 }//End of switch

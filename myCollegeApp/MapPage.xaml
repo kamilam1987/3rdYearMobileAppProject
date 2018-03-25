@@ -7,12 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
-
+   
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <!--Adjust the size (view) to different devices-->
-        <!--In between 0px and 720px map control will be below the search controls-->
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
+                <!--In between 0px and 720px map control will be below the search controls-->
                 <VisualState x:Name="Narrow">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
@@ -44,7 +45,13 @@
                 <CheckBox x:Name="TrafficCheckBox" Content="Show traffic" Width="100" Height="50" Margin="15,35,15,15"
                           Checked="TrafficCheckBox_Checked" Unchecked="TrafficCheckBox_Unchecked" />
                 <Button x:Name="MapStyleButton" Content="Aerial" Width="100" Height="50" Margin="15" Click="MapStyleButton_Click"/>
+                <!-- Bar with options: to get user location and use a pin to marks user current position on the map-->
+                <CommandBar Margin="25">
+                    <AppBarButton Icon="Target" Label="Get Location" Click="AppBarButton_Click" />
+                    <AppBarToggleButton x:Name="PushPinToggle" Icon="MapPin" Label="Toggle Pushpin" Checked="AppBarToggleButton_Checked" IsChecked="False" Unchecked="AppBarToggleButton_Unchecked"/>
+                </CommandBar>
             </StackPanel>
+           
             <!--Sets location of the map control relative to other controls-->
             <maps:MapControl x:Name="MapControl" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True"/>
         </RelativePanel>
