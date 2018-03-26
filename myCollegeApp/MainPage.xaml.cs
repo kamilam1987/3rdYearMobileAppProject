@@ -39,6 +39,10 @@ namespace myCollegeApp
                     case "Map": //If tag is map, load MapPage
                         MainFrame.Navigate(typeof(MapPage));
                         break;
+                    case "Calendar": //If tag is map, load MapPage
+                        MainFrame.Navigate(typeof(CalendarPage));
+                        break;
+
                 }//End of switch
 
                 //After selection close the split view

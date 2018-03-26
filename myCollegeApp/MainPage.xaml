@@ -58,10 +58,10 @@
                             <TextBlock Text="Map" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Tag="Mail" Click="RadioButtonPaneItem_Click">
+                    <RadioButton Tag="Calendar" Click="RadioButtonPaneItem_Click">
                         <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Symbol="Mail"/>
-                            <TextBlock Text="Mail" Margin="15,0,0,0"/>
+                            <SymbolIcon Symbol="Calendar"/>
+                            <TextBlock Text="Calendar" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Tag="AddFriend" Click="RadioButtonPaneItem_Click">
