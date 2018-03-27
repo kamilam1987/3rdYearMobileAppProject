@@ -64,10 +64,10 @@
                             <TextBlock Text="Calendar" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Tag="AddFriend" Click="RadioButtonPaneItem_Click">
+                    <RadioButton Tag="Calculator" Click="RadioButtonPaneItem_Click">
                         <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Symbol="AddFriend"/>
-                            <TextBlock Text="Add a Friend" Margin="15,0,0,0"/>
+                            <SymbolIcon Symbol="Calculator"/>
+                            <TextBlock Text="% Calculator" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Tag="Settings" Click="RadioButtonPaneItem_Click">
