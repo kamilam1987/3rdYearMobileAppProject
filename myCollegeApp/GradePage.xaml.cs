@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using myCollegeApp.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,6 +28,17 @@ namespace myCollegeApp
         public GradePage()
         {
             this.InitializeComponent();
+            Loaded += GradePage_Loaded;
+        }
+
+        private void GradePage_Loaded(object sender, RoutedEventArgs e)
+        {
+            GoalControl.OnGoalsaved += GoalControl_OnGoalsaved;
+        }
+
+        private void GoalControl_OnGoalsaved(object sender, Goal e)
+        {
+           
         }
 
         //AppBarAddButton_Click method on click add button, display goal control

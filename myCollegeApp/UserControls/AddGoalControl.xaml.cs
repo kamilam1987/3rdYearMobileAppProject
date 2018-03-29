@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myCollegeApp.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace myCollegeApp.UserControls
 {
     public sealed partial class AddGoalControl : UserControl
     {
+        public event EventHandler<Goal> OnGoalsaved;
         public AddGoalControl()
         {
             this.InitializeComponent();
@@ -31,9 +33,17 @@ namespace myCollegeApp.UserControls
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //Fire event so that the Grade age gets the data
+            var newGoal = new Goal();//Create a new object
+            newGoal.Name = ModuleNameTextBox.Text;
+            newGoal.GradeGoal = Convert.ToInt32(GradeValueTextBox.Text);
+            newGoal.Notes = NotesTextBox.Text;
+
+            //Fire on goal save event
+            FireOnGoalSave(newGoal);
 
             //Happens at the end
             ClearTextBoxes();
+            Visibility = Visibility.Collapsed;
         }//End of SaveButton_Click
 
         //CancelButtom_Click method on click cancel button
@@ -51,6 +61,14 @@ namespace myCollegeApp.UserControls
             GradeValueTextBox.Text = string.Empty;
             NotesTextBox.Text = string.Empty;
         }//End of ClearTextBoxes method
+
+        //FireOnGoalSave method, call anytime needs to save info to the grade page
+        private void FireOnGoalSave(Goal newGoal)
+        {
+            //If not null then invoke
+            OnGoalsaved?.Invoke(null, newGoal);
+
+        }//End of FireOnGoalSave method
 
     }//End of AddGoalControl class
 
