@@ -29,10 +29,10 @@
 
         <StackPanel Grid.Row="2" Orientation="Vertical">
             <TextBlock Text="Notes:"/>
-            <TextBox x:Name="NotestextBox" Height="100"/>
+            <TextBox x:Name="NotesTextBox" Height="100"/>
         </StackPanel>
 
-        <Button Grid.Row="3" Content="Save" HorizontalAlignment="Left"/>
-        <Button Grid.Row="3" Content="Cancel" HorizontalAlignment="Right"/>
+        <Button x:Name="SaveButton" Grid.Row="3" Content="Save" HorizontalAlignment="Left" Click="SaveButton_Click"/>
+        <Button x:Name="CancelButtom" Grid.Row="3" Content="Cancel" HorizontalAlignment="Right" Click="CancelButtom_Click"/>
     </Grid>
 </UserControl>

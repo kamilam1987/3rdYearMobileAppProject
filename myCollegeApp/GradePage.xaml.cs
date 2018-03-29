@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+//Author: Kamila Michel
+//Source code adapted from: https://www.youtube.com/watch?v=bvz7vtkpchI
 
 namespace myCollegeApp
 {
@@ -27,10 +29,13 @@ namespace myCollegeApp
             this.InitializeComponent();
         }
 
+        //AppBarAddButton_Click method on click add button, display goal control
         private void AppBarAddButton_Click(object sender, RoutedEventArgs e)
         {
             //Open the add goal control
             GoalControl.Visibility = Visibility.Visible;
-        }
-    }
-}
+        }//End of AppBarAddButton_Click
+
+    }//End of GradePage class
+
+}//End of myCollegeApp namespace 
