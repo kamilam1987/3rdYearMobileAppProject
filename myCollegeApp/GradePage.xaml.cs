@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using myCollegeApp.Model;
+using myCollegeApp.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,8 @@ namespace myCollegeApp
     /// </summary>
     public sealed partial class GradePage : Page
     {
+        //Variable for a view model
+        private GradePageViewModel _gradePageViewModel;
         public GradePage()
         {
             this.InitializeComponent();
@@ -34,12 +37,21 @@ namespace myCollegeApp
         private void GradePage_Loaded(object sender, RoutedEventArgs e)
         {
             GoalControl.OnGoalsaved += GoalControl_OnGoalsaved;
-        }
+
+            if (_gradePageViewModel == null)
+            { 
+                _gradePageViewModel = new GradePageViewModel();//Makes not null
+
+                DataContext = _gradePageViewModel;
+            }//End of if
+
+        }//End of GradePage_Loaded method
 
         private void GoalControl_OnGoalsaved(object sender, Goal e)
         {
-           
-        }
+            //Add goal to a list
+            _gradePageViewModel.AddNewGoal(e);
+        }//End of GoalControl_OnGoalsaved method
 
         //AppBarAddButton_Click method on click add button, display goal control
         private void AppBarAddButton_Click(object sender, RoutedEventArgs e)
