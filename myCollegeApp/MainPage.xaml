@@ -70,10 +70,10 @@
                             <TextBlock Text="% Calculator" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Tag="Settings" Click="RadioButtonPaneItem_Click">
+                    <RadioButton Tag="Bookmarks" Click="RadioButtonPaneItem_Click">
                         <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Symbol="Setting"/>
-                            <TextBlock Text="Settings" Margin="15,0,0,0"/>
+                            <SymbolIcon Symbol="Bookmarks"/>
+                            <TextBlock Text="Grade Tracker" Margin="15,0,0,0"/>
                         </StackPanel>
                     </RadioButton>
                 </StackPanel>

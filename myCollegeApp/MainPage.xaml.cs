@@ -39,11 +39,14 @@ namespace myCollegeApp
                     case "Map": //If tag is map, load MapPage
                         MainFrame.Navigate(typeof(MapPage));
                         break;
-                    case "Calendar": //If tag is map, load MapPage
+                    case "Calendar": //If tag is Calendar, load CalendarPage
                         MainFrame.Navigate(typeof(CalendarPage));
                         break;
-                    case "Calculator": //If tag is map, load MapPage
+                    case "Calculator": //If tag is Calculator, load CalculatorPage
                         MainFrame.Navigate(typeof(CalculatorPage));
+                        break;
+                    case "Bookmarks": //If tag is Bookmarks, load GradePage
+                        MainFrame.Navigate(typeof(GradePage));
                         break;
 
                 }//End of switch
