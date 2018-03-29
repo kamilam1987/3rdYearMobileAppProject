@@ -5,6 +5,7 @@
     xmlns:local="using:myCollegeApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:CC="using:myCollegeApp.UserControls"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -18,7 +19,9 @@
         </ListView>
 
         <CommandBar Grid.Row="1" ClosedDisplayMode="Minimal">
-            <AppBarButton Icon="Add" Label="Add Goal"/>
+            <AppBarButton x:Name="AppBarAddButton" Icon="Add" Label="Add Goal" Click="AppBarAddButton_Click"/>
         </CommandBar>
+
+        <CC:AddGoalControl x:Name="GoalControl" Grid.RowSpan="2" Visibility="Collapsed"></CC:AddGoalControl>
     </Grid>
 </Page>

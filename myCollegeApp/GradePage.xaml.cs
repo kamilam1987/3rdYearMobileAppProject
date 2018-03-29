@@ -26,5 +26,11 @@ namespace myCollegeApp
         {
             this.InitializeComponent();
         }
+
+        private void AppBarAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Open the add goal control
+            GoalControl.Visibility = Visibility.Visible;
+        }
     }
 }
