@@ -16,7 +16,7 @@ namespace myCollegeApp.ViewModel
         public void NotifyPropertyChanged(String propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
-            if(null != handler)
+            if (null != handler)
             {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }//End of if

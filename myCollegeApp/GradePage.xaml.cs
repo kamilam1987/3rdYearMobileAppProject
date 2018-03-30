@@ -39,7 +39,7 @@ namespace myCollegeApp
             GoalControl.OnGoalsaved += GoalControl_OnGoalsaved;
 
             if (_gradePageViewModel == null)
-            { 
+            {
                 _gradePageViewModel = new GradePageViewModel();//Makes not null
 
                 DataContext = _gradePageViewModel;

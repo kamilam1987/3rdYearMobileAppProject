@@ -17,7 +17,7 @@ namespace myCollegeApp.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//Identity column
         public int GoalId { get; set; }//Id number
         public string Name { get; set; }//Module name
-        public decimal GradeGoal { get; set; }//Grade value
+        public double GradeGoal { get; set; }//Grade value
         public string Notes { get; set; }//Additional notes
         public DateTime Date { get; set; }//Date when the goal was made
         public decimal Balance { get; set; }//How much of goal was completed

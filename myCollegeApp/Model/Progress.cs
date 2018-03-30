@@ -21,7 +21,7 @@ namespace myCollegeApp.Model
         [ForeignKey("GoalId")]//Passing GoalId
         public Goal Goal { get; set; }//Assign this goal object to the goal associated with it
 
-        
+
     }//End of progress class
 
 }//End of namespace

@@ -35,7 +35,7 @@ namespace myCollegeApp.UserControls
             //Fire event so that the Grade age gets the data
             var newGoal = new Goal();//Create a new object
             newGoal.Name = ModuleNameTextBox.Text;
-            newGoal.GradeGoal = Convert.ToInt32(GradeValueTextBox.Text);
+            newGoal.GradeGoal = Convert.ToDouble(GradeValueTextBox.Text);
             newGoal.Notes = NotesTextBox.Text;
 
             //Fire on goal save event

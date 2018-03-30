@@ -36,15 +36,15 @@
                         </Grid.ColumnDefinitions>
                         <!--Name of the module goal-->
                         <TextBlock Margin="0,40,0,0" Text="Module Name: "/>
-                        <TextBlock Grid.Column="1" Text="{Binding Name}"/>
-                        
+                        <TextBlock Margin="0,40,0,0" Grid.Column="1" Text="{Binding Name}"/>
+
                         <!--Last updated-->
                         <TextBlock Margin="0,10,0,0" Grid.Row="1" Text="Progress : " />
                         <TextBlock Grid.Row="1" Grid.Column="1" Text=""/>
-                        
+
                         <!--Progress bar -->
-                        <ProgressBar Margin="0,10,0,10" Grid.Row="2" Value="25" Grid.ColumnSpan="3" Maximum="{Binding GradeGoal}" IsIndeterminate="False" Height="10"/>
-                        
+                        <ProgressBar Margin="0,10,0,10" Grid.Row="2" Grid.ColumnSpan="3" Value ="100" Maximum="{Binding GradeGoal}" IsIndeterminate="False" Height="10"/>
+
                         <!--Add edit button -->
                         <Button Grid.Row="3" Grid.Column="0" Content="Add"/>
                         <Button Grid.Row="3" Grid.Column="1" Content="Decrease"/>
