@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 //Author: Kamila Michel
-//Source code adapted from: https://www.youtube.com/watch?v=bvz7vtkpchI
+//Source based on: https://www.youtube.com/watch?v=bvz7vtkpchI
 
 
 namespace myCollegeApp.UserControls

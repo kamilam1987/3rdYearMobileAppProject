@@ -6,10 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author: Kamila Michel
+//Source based on: https://www.youtube.com/watch?v=fkSW0eSF9mg 
+
 namespace myCollegeApp.ViewModel
 {
     public class GradePageViewModel : BaseViewModel
     {
+        //An ObservableCollection is a dynamic collection of objects of a given type. Objects can be added, removed or be updated with an automatic notification of actions. When an object is added to or removed from an observable collection, the UI is automatically updated
         //List that will hold list of the goals
         private ObservableCollection<Goal> _goalList;//The list changed, display new item that was added
         public ObservableCollection<Goal> GoalList

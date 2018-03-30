@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author: Kamila Michel
+//Source code based on: https://www.youtube.com/watch?v=fkSW0eSF9mg
+
 namespace myCollegeApp.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
